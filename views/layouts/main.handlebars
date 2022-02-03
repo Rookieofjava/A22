@@ -6,22 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="dist/main.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body>
   {{!-- layout --}}
   <div class="container">
     <div class="button-wrapper">
-      <a href="/" class="homepage">回到首頁</a>
-      <a href="/about" class="about">About</a>
-      <a href="/portfolio" class="portfolio">Portfolio</a>
-      <a href="/contact" class="contact">Contact</a>
+      <div class="left-button">
+        <a href="/" class="homepage">回到首頁</a>
+      </div>
+      <div class="right-button">
+        <a href="/about" class="about">About</a>
+        <a href="/portfolio" class="portfolio">Portfolio</a>
+        <a href="/contact" class="contact">Contact</a>
+      </div>
     </div>
-  {{!-- partial templates will replace the part of "body" here --}}
-  {{{ body }}}
+    {{!-- partial templates will replace the part of "body" here --}}
+    {{{ body }}}
   </div>
-  <script src="dis/bundle.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>

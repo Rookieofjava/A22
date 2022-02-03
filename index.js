@@ -1,6 +1,7 @@
 //引入epxress
 const express = require('express')
 const app = express()
+
 //設定連接埠號及本機名稱(express defalt localname)
 const port = 3000
 
@@ -8,6 +9,9 @@ const port = 3000
 const exphbs = require('express-handlebars')
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
+
+//載入靜態檔案
+app.use(express.static('src'))
 
 //server set up
 app.get('/', (req, res) => {
@@ -25,8 +29,6 @@ app.get('/portfolio', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
-
-
 
 app.listen(port, () => {
   console.log(`express is listening on localhost:${port}`)
