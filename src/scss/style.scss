@@ -29,11 +29,6 @@ a {
       background-color: greenyellow;
       transition: background-color .2s ease-out;
     }
-    &:focus {
-      background-color: black;
-      color: white;
-      font-weight: 700;
-    } 
 }
 
 .container {
@@ -70,4 +65,3 @@ a {
     margin: 2rem;
   }
 }
-
